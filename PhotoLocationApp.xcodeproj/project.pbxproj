@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5332C8082A88900C00DC5662 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8072A88900C00DC5662 /* LocationListView.swift */; };
+		5332C80A2A88902100DC5662 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8092A88902100DC5662 /* AddLocationView.swift */; };
+		5332C80C2A88903400DC5662 /* RecommendLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C80B2A88903400DC5662 /* RecommendLocationView.swift */; };
+		5332C80E2A88904E00DC5662 /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C80D2A88904E00DC5662 /* LocationListViewModel.swift */; };
+		5332C8102A88905C00DC5662 /* AddLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C80F2A88905C00DC5662 /* AddLocationViewModel.swift */; };
+		5332C8122A88906C00DC5662 /* RecommendLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8112A88906C00DC5662 /* RecommendLocationViewModel.swift */; };
+		5332C8162A88E68200DC5662 /* TabView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8152A88E68200DC5662 /* TabView+.swift */; };
+		5332C81A2A88F1AB00DC5662 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5332C81C2A88F1AB00DC5662 /* Localizable.strings */; };
+		5332C8212A88FC6F00DC5662 /* SaveLocationSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8202A88FC6F00DC5662 /* SaveLocationSwiftModel.swift */; };
+		5332C8242A88FC9700DC5662 /* SaveLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8232A88FC9700DC5662 /* SaveLocationRepository.swift */; };
+		5332C8272A88FCF200DC5662 /* SaveLocationRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8262A88FCF200DC5662 /* SaveLocationRealmModel.swift */; };
+		5332C82B2A88FEEF00DC5662 /* IdealTimingSwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C82A2A88FEEF00DC5662 /* IdealTimingSwiftModel.swift */; };
+		5332C82D2A88FF0000DC5662 /* IdealConditionRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C82C2A88FF0000DC5662 /* IdealConditionRealmModel.swift */; };
 		537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */; };
-		537058B22A8875D2003B79E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058B12A8875D2003B79E7 /* ContentView.swift */; };
+		537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058B12A8875D2003B79E7 /* MainTabView.swift */; };
 		537058B42A8875D2003B79E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537058B32A8875D2003B79E7 /* Assets.xcassets */; };
 		537058B82A8875D2003B79E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537058B72A8875D2003B79E7 /* Preview Assets.xcassets */; };
 		537058C22A8875D2003B79E7 /* PhotoLocationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058C12A8875D2003B79E7 /* PhotoLocationAppTests.swift */; };
@@ -34,9 +47,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5332C8072A88900C00DC5662 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		5332C8092A88902100DC5662 /* AddLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
+		5332C80B2A88903400DC5662 /* RecommendLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendLocationView.swift; sourceTree = "<group>"; };
+		5332C80D2A88904E00DC5662 /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
+		5332C80F2A88905C00DC5662 /* AddLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewModel.swift; sourceTree = "<group>"; };
+		5332C8112A88906C00DC5662 /* RecommendLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendLocationViewModel.swift; sourceTree = "<group>"; };
+		5332C8152A88E68200DC5662 /* TabView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabView+.swift"; sourceTree = "<group>"; };
+		5332C81D2A88F1C800DC5662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5332C8202A88FC6F00DC5662 /* SaveLocationSwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLocationSwiftModel.swift; sourceTree = "<group>"; };
+		5332C8232A88FC9700DC5662 /* SaveLocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLocationRepository.swift; sourceTree = "<group>"; };
+		5332C8262A88FCF200DC5662 /* SaveLocationRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLocationRealmModel.swift; sourceTree = "<group>"; };
+		5332C82A2A88FEEF00DC5662 /* IdealTimingSwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealTimingSwiftModel.swift; sourceTree = "<group>"; };
+		5332C82C2A88FF0000DC5662 /* IdealConditionRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealConditionRealmModel.swift; sourceTree = "<group>"; };
 		537058AC2A8875D2003B79E7 /* PhotoLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocationAppApp.swift; sourceTree = "<group>"; };
-		537058B12A8875D2003B79E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		537058B12A8875D2003B79E7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		537058B32A8875D2003B79E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		537058B52A8875D2003B79E7 /* PhotoLocationApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoLocationApp.entitlements; sourceTree = "<group>"; };
 		537058B72A8875D2003B79E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -72,6 +98,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5332C7FE2A888FA500DC5662 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5332C8132A8893DC00DC5662 /* TabContent */,
+				537058B12A8875D2003B79E7 /* MainTabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5332C8132A8893DC00DC5662 /* TabContent */ = {
+			isa = PBXGroup;
+			children = (
+				5332C8072A88900C00DC5662 /* LocationListView.swift */,
+				5332C8092A88902100DC5662 /* AddLocationView.swift */,
+				5332C80B2A88903400DC5662 /* RecommendLocationView.swift */,
+			);
+			path = TabContent;
+			sourceTree = "<group>";
+		};
+		5332C8142A88E66000DC5662 /* Exstension */ = {
+			isa = PBXGroup;
+			children = (
+				5332C8152A88E68200DC5662 /* TabView+.swift */,
+			);
+			path = Exstension;
+			sourceTree = "<group>";
+		};
+		5332C8172A88ED4F00DC5662 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				537058B32A8875D2003B79E7 /* Assets.xcassets */,
+				5332C81C2A88F1AB00DC5662 /* Localizable.strings */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5332C81E2A88FC2400DC5662 /*  AplicationModel */ = {
+			isa = PBXGroup;
+			children = (
+				5332C8222A88FC8300DC5662 /* Repository */,
+				5332C81F2A88FC4500DC5662 /* Models */,
+			);
+			path = " AplicationModel";
+			sourceTree = "<group>";
+		};
+		5332C81F2A88FC4500DC5662 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5332C8282A88FEBF00DC5662 /* IdealConditionModel */,
+				5332C8252A88FCDB00DC5662 /* SaveLocationModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5332C8222A88FC8300DC5662 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5332C8232A88FC9700DC5662 /* SaveLocationRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5332C8252A88FCDB00DC5662 /* SaveLocationModel */ = {
+			isa = PBXGroup;
+			children = (
+				5332C8202A88FC6F00DC5662 /* SaveLocationSwiftModel.swift */,
+				5332C8262A88FCF200DC5662 /* SaveLocationRealmModel.swift */,
+			);
+			path = SaveLocationModel;
+			sourceTree = "<group>";
+		};
+		5332C8282A88FEBF00DC5662 /* IdealConditionModel */ = {
+			isa = PBXGroup;
+			children = (
+				5332C82A2A88FEEF00DC5662 /* IdealTimingSwiftModel.swift */,
+				5332C82C2A88FF0000DC5662 /* IdealConditionRealmModel.swift */,
+			);
+			path = IdealConditionModel;
+			sourceTree = "<group>";
+		};
 		537058A32A8875D2003B79E7 = {
 			isa = PBXGroup;
 			children = (
@@ -95,12 +201,12 @@
 		537058AE2A8875D2003B79E7 /* PhotoLocationApp */ = {
 			isa = PBXGroup;
 			children = (
+				5332C81E2A88FC2400DC5662 /*  AplicationModel */,
+				5332C8172A88ED4F00DC5662 /* Resource */,
+				5332C8142A88E66000DC5662 /* Exstension */,
+				5332C7FE2A888FA500DC5662 /* Views */,
 				537058DC2A8875FC003B79E7 /* ViewModels */,
-				537058DB2A8875F5003B79E7 /* Views */,
-				537058DA2A8875E5003B79E7 /* Models */,
 				537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */,
-				537058B12A8875D2003B79E7 /* ContentView.swift */,
-				537058B32A8875D2003B79E7 /* Assets.xcassets */,
 				537058B52A8875D2003B79E7 /* PhotoLocationApp.entitlements */,
 				537058B62A8875D2003B79E7 /* Preview Content */,
 			);
@@ -132,23 +238,12 @@
 			path = PhotoLocationAppUITests;
 			sourceTree = "<group>";
 		};
-		537058DA2A8875E5003B79E7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		537058DB2A8875F5003B79E7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		537058DC2A8875FC003B79E7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5332C80D2A88904E00DC5662 /* LocationListViewModel.swift */,
+				5332C80F2A88905C00DC5662 /* AddLocationViewModel.swift */,
+				5332C8112A88906C00DC5662 /* RecommendLocationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -234,11 +329,11 @@
 			};
 			buildConfigurationList = 537058A72A8875D2003B79E7 /* Build configuration list for PBXProject "PhotoLocationApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ja;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ja,
 			);
 			mainGroup = 537058A32A8875D2003B79E7;
 			productRefGroup = 537058AD2A8875D2003B79E7 /* Products */;
@@ -259,6 +354,7 @@
 			files = (
 				537058B82A8875D2003B79E7 /* Preview Assets.xcassets in Resources */,
 				537058B42A8875D2003B79E7 /* Assets.xcassets in Resources */,
+				5332C81A2A88F1AB00DC5662 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +379,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537058B22A8875D2003B79E7 /* ContentView.swift in Sources */,
+				5332C8122A88906C00DC5662 /* RecommendLocationViewModel.swift in Sources */,
+				5332C8272A88FCF200DC5662 /* SaveLocationRealmModel.swift in Sources */,
+				5332C8102A88905C00DC5662 /* AddLocationViewModel.swift in Sources */,
+				5332C8082A88900C00DC5662 /* LocationListView.swift in Sources */,
+				5332C8242A88FC9700DC5662 /* SaveLocationRepository.swift in Sources */,
+				5332C80C2A88903400DC5662 /* RecommendLocationView.swift in Sources */,
+				5332C80E2A88904E00DC5662 /* LocationListViewModel.swift in Sources */,
+				5332C82D2A88FF0000DC5662 /* IdealConditionRealmModel.swift in Sources */,
+				5332C80A2A88902100DC5662 /* AddLocationView.swift in Sources */,
+				537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */,
+				5332C8212A88FC6F00DC5662 /* SaveLocationSwiftModel.swift in Sources */,
+				5332C82B2A88FEEF00DC5662 /* IdealTimingSwiftModel.swift in Sources */,
 				537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */,
+				5332C8162A88E68200DC5662 /* TabView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,11 +428,23 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		5332C81C2A88F1AB00DC5662 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5332C81D2A88F1C800DC5662 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		537058CF2A8875D2003B79E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -383,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -440,7 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PhotoLocationApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X5LBWH4CYQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -458,7 +579,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroakiapp.PhotoLocationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -480,7 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PhotoLocationApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X5LBWH4CYQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -498,7 +619,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroakiapp.PhotoLocationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
