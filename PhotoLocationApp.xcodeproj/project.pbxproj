@@ -95,6 +95,9 @@
 		537058AE2A8875D2003B79E7 /* PhotoLocationApp */ = {
 			isa = PBXGroup;
 			children = (
+				537058DC2A8875FC003B79E7 /* ViewModels */,
+				537058DB2A8875F5003B79E7 /* Views */,
+				537058DA2A8875E5003B79E7 /* Models */,
 				537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */,
 				537058B12A8875D2003B79E7 /* ContentView.swift */,
 				537058B32A8875D2003B79E7 /* Assets.xcassets */,
@@ -127,6 +130,27 @@
 				537058CD2A8875D2003B79E7 /* PhotoLocationAppUITestsLaunchTests.swift */,
 			);
 			path = PhotoLocationAppUITests;
+			sourceTree = "<group>";
+		};
+		537058DA2A8875E5003B79E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		537058DB2A8875F5003B79E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		537058DC2A8875FC003B79E7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
