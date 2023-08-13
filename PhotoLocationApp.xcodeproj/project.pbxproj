@@ -16,6 +16,7 @@
 		5332C80E2A88904E00DC5662 /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C80D2A88904E00DC5662 /* LocationListViewModel.swift */; };
 		5332C8102A88905C00DC5662 /* AddLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C80F2A88905C00DC5662 /* AddLocationViewModel.swift */; };
 		5332C8122A88906C00DC5662 /* RecommendLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8112A88906C00DC5662 /* RecommendLocationViewModel.swift */; };
+		5332C8162A88E68200DC5662 /* TabView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8152A88E68200DC5662 /* TabView+.swift */; };
 		537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */; };
 		537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058B12A8875D2003B79E7 /* MainTabView.swift */; };
 		537058B42A8875D2003B79E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537058B32A8875D2003B79E7 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		5332C80D2A88904E00DC5662 /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
 		5332C80F2A88905C00DC5662 /* AddLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewModel.swift; sourceTree = "<group>"; };
 		5332C8112A88906C00DC5662 /* RecommendLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendLocationViewModel.swift; sourceTree = "<group>"; };
+		5332C8152A88E68200DC5662 /* TabView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabView+.swift"; sourceTree = "<group>"; };
 		537058AC2A8875D2003B79E7 /* PhotoLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocationAppApp.swift; sourceTree = "<group>"; };
 		537058B12A8875D2003B79E7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			path = TabContent;
 			sourceTree = "<group>";
 		};
+		5332C8142A88E66000DC5662 /* Exstension */ = {
+			isa = PBXGroup;
+			children = (
+				5332C8152A88E68200DC5662 /* TabView+.swift */,
+			);
+			path = Exstension;
+			sourceTree = "<group>";
+		};
 		537058A32A8875D2003B79E7 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 		537058AE2A8875D2003B79E7 /* PhotoLocationApp */ = {
 			isa = PBXGroup;
 			children = (
+				5332C8142A88E66000DC5662 /* Exstension */,
 				5332C8002A888FB400DC5662 /* Models */,
 				5332C7FE2A888FA500DC5662 /* Views */,
 				537058DC2A8875FC003B79E7 /* ViewModels */,
@@ -329,6 +340,7 @@
 				5332C80A2A88902100DC5662 /* AddLocationView.swift in Sources */,
 				537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */,
 				537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */,
+				5332C8162A88E68200DC5662 /* TabView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,20 +8,37 @@
 import SwiftUI
 
 struct MainTabView: View {
+
+    @State private var selectionType: SelectionType = .locationList
+
+
     var body: some View {
-        TabView {
-            Text("1")
+        TabView(selection: $selectionType, content: {
+            LocationListView()
                 .tabItem {
-                    Text("1")
+                    Text("List")
                 }
-            Text("2")
+                .tag(SelectionType.locationList)
+            AddLocationView()
                 .tabItem {
-                    Text("2")
+                    Text("Add")
                 }
-            Text("3")
+                .tag(SelectionType.addLocation)
+            RecommendLocationView()
                 .tabItem {
-                    Text("3")
+                    Text("recommend")
                 }
+                .tag(SelectionType.recommendLocation)
+        })
+        .onChange(of: selectionType) { type in
+            switch type {
+            case .locationList:
+                print("locationList")
+            case .addLocation:
+                print("addLocation")
+            case .recommendLocation:
+                print("recommendLocation")
+            }
         }
     }
 }
