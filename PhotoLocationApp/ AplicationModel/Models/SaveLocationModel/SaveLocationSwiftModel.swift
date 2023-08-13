@@ -13,17 +13,16 @@ class SaveLocationSwiftModel {
     let latitude: Double // 緯度
     let longitude: Double // 経度
     let saveDate: Date
-    let idealCondition: IdealConditionSwiftModel
+    let idealCondition: IdealConditionSwiftModel?
 
     init(
-        uuid: String,
         name: String,
         latitude: Double,
         longitude: Double,
         saveDate: Date,
-        idealCondition: IdealConditionSwiftModel
+        idealCondition: IdealConditionSwiftModel?
     ) {
-        self.uuid = uuid
+        self.uuid = UUID().uuidString
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
