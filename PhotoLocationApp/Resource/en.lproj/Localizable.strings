@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  PhotoLocationApp
+
+  Created by HiroakiSaito on 2023/08/13.
+  
+*/
+"locationListTab" = "一覧";
+"AddLocationTab" = "追加";
+"RecommendLocationTab" = "おすすめ";

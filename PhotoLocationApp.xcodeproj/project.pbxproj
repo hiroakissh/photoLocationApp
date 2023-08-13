@@ -17,6 +17,7 @@
 		5332C8102A88905C00DC5662 /* AddLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C80F2A88905C00DC5662 /* AddLocationViewModel.swift */; };
 		5332C8122A88906C00DC5662 /* RecommendLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8112A88906C00DC5662 /* RecommendLocationViewModel.swift */; };
 		5332C8162A88E68200DC5662 /* TabView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8152A88E68200DC5662 /* TabView+.swift */; };
+		5332C81A2A88F1AB00DC5662 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5332C81C2A88F1AB00DC5662 /* Localizable.strings */; };
 		537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */; };
 		537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058B12A8875D2003B79E7 /* MainTabView.swift */; };
 		537058B42A8875D2003B79E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537058B32A8875D2003B79E7 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		5332C80F2A88905C00DC5662 /* AddLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewModel.swift; sourceTree = "<group>"; };
 		5332C8112A88906C00DC5662 /* RecommendLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendLocationViewModel.swift; sourceTree = "<group>"; };
 		5332C8152A88E68200DC5662 /* TabView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabView+.swift"; sourceTree = "<group>"; };
+		5332C81D2A88F1C800DC5662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		537058AC2A8875D2003B79E7 /* PhotoLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocationAppApp.swift; sourceTree = "<group>"; };
 		537058B12A8875D2003B79E7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,15 @@
 			path = Exstension;
 			sourceTree = "<group>";
 		};
+		5332C8172A88ED4F00DC5662 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				537058B32A8875D2003B79E7 /* Assets.xcassets */,
+				5332C81C2A88F1AB00DC5662 /* Localizable.strings */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		537058A32A8875D2003B79E7 = {
 			isa = PBXGroup;
 			children = (
@@ -152,12 +163,12 @@
 		537058AE2A8875D2003B79E7 /* PhotoLocationApp */ = {
 			isa = PBXGroup;
 			children = (
+				5332C8172A88ED4F00DC5662 /* Resource */,
 				5332C8142A88E66000DC5662 /* Exstension */,
 				5332C8002A888FB400DC5662 /* Models */,
 				5332C7FE2A888FA500DC5662 /* Views */,
 				537058DC2A8875FC003B79E7 /* ViewModels */,
 				537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */,
-				537058B32A8875D2003B79E7 /* Assets.xcassets */,
 				537058B52A8875D2003B79E7 /* PhotoLocationApp.entitlements */,
 				537058B62A8875D2003B79E7 /* Preview Content */,
 			);
@@ -280,11 +291,11 @@
 			};
 			buildConfigurationList = 537058A72A8875D2003B79E7 /* Build configuration list for PBXProject "PhotoLocationApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ja;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ja,
 			);
 			mainGroup = 537058A32A8875D2003B79E7;
 			productRefGroup = 537058AD2A8875D2003B79E7 /* Products */;
@@ -305,6 +316,7 @@
 			files = (
 				537058B82A8875D2003B79E7 /* Preview Assets.xcassets in Resources */,
 				537058B42A8875D2003B79E7 /* Assets.xcassets in Resources */,
+				5332C81A2A88F1AB00DC5662 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,11 +388,23 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		5332C81C2A88F1AB00DC5662 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5332C81D2A88F1C800DC5662 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		537058CF2A8875D2003B79E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -439,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

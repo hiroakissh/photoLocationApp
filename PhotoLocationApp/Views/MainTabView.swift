@@ -16,17 +16,20 @@ struct MainTabView: View {
         TabView(selection: $selectionType, content: {
             LocationListView()
                 .tabItem {
-                    Text("List")
+                    Image(systemName: "list.bullet")
+                    Text(LocalizedStringKey(String("LocationListTab")))
                 }
                 .tag(SelectionType.locationList)
             AddLocationView()
                 .tabItem {
-                    Text("Add")
+                    Image(systemName: "plus.app")
+                    Text(LocalizedStringKey(String("AddLocationTab")))
                 }
                 .tag(SelectionType.addLocation)
             RecommendLocationView()
                 .tabItem {
-                    Text("recommend")
+                    Image(systemName: "info.circle")
+                    Text(LocalizedStringKey(String("RecommendLocationTab")))
                 }
                 .tag(SelectionType.recommendLocation)
         })
