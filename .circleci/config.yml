@@ -1,24 +1,15 @@
 # .circleci/config.yml
 version: 2.1
-orbs:
-    slack: circleci/slack@4.12.5
-    macos: circleci/macos@2
-
-executors:
-  ios_builder:
+jobs:
+  build-and-test:
     macos:
-      xcode: 14.1.0
+      xcode: 14.0.1
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
-
-jobs:
-  build-and-test:
-    executor: ios_builder
     steps:
       - checkout
       - run: bundle install
-      - run: bundle update fastlane
       - run:
           name: Fastlane
           command: bundle exec fastlane $FASTLANE_LANE
@@ -26,17 +17,13 @@ jobs:
           path: output
       - store_test_results:
           path: output/scan
-      - slack/notify:
-          event: pass
-          channel: C05JPH36YQH
-          template: basic_success_1
-      - slack/notify:
-          event: fail
-          channel: C05JPH36YQH
-          template: basic_fail_1
 
   adhoc:
-    executor: ios_builder
+    macos:
+      xcode: 14.0.1
+    environment:
+      FL_OUTPUT_DIR: output
+      FASTLANE_LANE: adhoc
     steps:
       - checkout
       - run: bundle install
@@ -49,12 +36,10 @@ jobs:
 workflows:
   build-test-adhoc:
     jobs:
-      - build-and-test:
-          context: slack-secrets
+      - build-and-test
       - adhoc:
           filters:
             branches:
               only: development
           requires:
             - build-and-test
-
