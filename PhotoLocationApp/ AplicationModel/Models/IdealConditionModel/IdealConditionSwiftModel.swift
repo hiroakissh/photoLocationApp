@@ -7,7 +7,7 @@
 
 import Foundation
 
-class IdealConditionSwiftModel {
+class IdealConditionSwiftModel: Identifiable {
     let idealMonth: Int? // 理想な月
     let idealTime: Int? // 理想な時
     let idealWeather: String?

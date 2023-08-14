@@ -7,13 +7,28 @@
 
 import Foundation
 
-class SaveLocationSwiftModel {
+class SaveLocationSwiftModel: Identifiable {
     let uuid: String
     let name: String
     let latitude: Double // 緯度
     let longitude: Double // 経度
     let saveDate: Date
-    let idealCondition: IdealConditionSwiftModel
+    let idealCondition: IdealConditionSwiftModel?
+
+    init(
+        name: String,
+        latitude: Double,
+        longitude: Double,
+        saveDate: Date,
+        idealCondition: IdealConditionSwiftModel?
+    ) {
+        self.uuid = UUID().uuidString
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+        self.saveDate = saveDate
+        self.idealCondition = idealCondition
+    }
 
     init(
         uuid: String,
@@ -21,7 +36,7 @@ class SaveLocationSwiftModel {
         latitude: Double,
         longitude: Double,
         saveDate: Date,
-        idealCondition: IdealConditionSwiftModel
+        idealCondition: IdealConditionSwiftModel?
     ) {
         self.uuid = uuid
         self.name = name
