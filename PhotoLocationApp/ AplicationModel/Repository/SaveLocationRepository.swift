@@ -9,30 +9,27 @@ import Foundation
 import RealmSwift
 import Combine
 
-class saveLocationRepository: SaveRepositoryProtocol {
+enum RealmError: Error {
+    case accessError
+}
+
+protocol SaveLocationRepositoryProtocol {
+    func fetchData() -> Future<[SaveLocationSwiftModel], Error>
+}
+
+class saveLocationRepository: SaveLocationRepositoryProtocol {
     private var realm: Realm
-    private var cancellables: Set<AnyCancellable> = []
-    let saveLocationSubject = CurrentValueSubject<[SaveLocationSwiftModel], Error>([])
 
     init() {
-        let config = Realm.Configuration(schemaVersion: 1)
-        realm = try! Realm(configuration: config)
-        Realm.Configuration.defaultConfiguration = config
-        bind()
+        realm = try! Realm()
     }
 
-    func bind() {
-        saveLocationSubject
-            .sink { error in
-                print("Error")
-            } receiveValue: { values in
-                print("receiveValue: \(values)")
-            }
-            .store(in: &cancellables)
-    }
-
-    func fetchData() {
-        let results = realm.objects(SaveLocationRealmModel.self)
-        saveLocationSubject.send(results.map { $0.convertToSwiftModel() })
+    func fetchData() -> Future<[SaveLocationSwiftModel], Error> {
+        let realmResults = realm.objects(SaveLocationRealmModel.self)
+        let arrayResults: Array<SaveLocationRealmModel> = Array(realmResults)
+        let swiftData = arrayResults.map { $0.convertToSwiftModel() }
+        return Future<[SaveLocationSwiftModel], Error> { value in
+            value(.success(swiftData))
+        }
     }
 }

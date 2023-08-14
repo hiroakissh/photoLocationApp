@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SaveLocationSwiftModel {
+class SaveLocationSwiftModel: Identifiable {
     let uuid: String
     let name: String
     let latitude: Double // 緯度

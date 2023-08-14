@@ -13,3 +13,8 @@ class IdealConditionRealmModel: Object {
     @Persisted var idealTime: Int? // 理想な時
     @Persisted var idealWeather: String?
 }
+
+extension IdealConditionRealmModel {
+    private static var config = Realm.Configuration(schemaVersion: 1)
+    private static var realm = try! Realm(configuration: config)
+}

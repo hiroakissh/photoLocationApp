@@ -7,3 +7,7 @@
 
 import Foundation
 import Combine
+
+protocol AddLocationRepositoryProtocol {
+    func addData() -> AnyPublisher<Any, Error>
+}

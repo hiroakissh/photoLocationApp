@@ -16,3 +16,8 @@ class SaveLocationRealmModel: Object {
     @Persisted var  saveDate: Date
     @Persisted var  idealCondition: IdealConditionRealmModel?
 }
+
+extension SaveLocationRealmModel {
+    private static var config = Realm.Configuration(schemaVersion: 1)
+    private static var realm = try! Realm(configuration: config)
+}

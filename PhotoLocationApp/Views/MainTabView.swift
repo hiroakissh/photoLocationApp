@@ -11,10 +11,9 @@ struct MainTabView: View {
 
     @State private var selectionType: SelectionType = .locationList
 
-
     var body: some View {
         TabView(selection: $selectionType, content: {
-            LocationListView()
+            LocationListView(viewModel: LocationListViewModel())
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text(LocalizedStringKey(String("LocationListTab")))
