@@ -29,4 +29,20 @@ class SaveLocationSwiftModel {
         self.saveDate = saveDate
         self.idealCondition = idealCondition
     }
+
+    init(
+        uuid: String,
+        name: String,
+        latitude: Double,
+        longitude: Double,
+        saveDate: Date,
+        idealCondition: IdealConditionSwiftModel?
+    ) {
+        self.uuid = uuid
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+        self.saveDate = saveDate
+        self.idealCondition = idealCondition
+    }
 }

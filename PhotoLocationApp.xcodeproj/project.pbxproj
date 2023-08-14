@@ -22,6 +22,9 @@
 		5332C82D2A88FF0000DC5662 /* IdealConditionRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C82C2A88FF0000DC5662 /* IdealConditionRealmModel.swift */; };
 		5332C8302A894B6000DC5662 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5332C82F2A894B6000DC5662 /* RealmSwift */; };
 		5332C8322A894D2C00DC5662 /* ConvertSwiftToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8312A894D2C00DC5662 /* ConvertSwiftToRealm.swift */; };
+		5332C8372A89517400DC5662 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8362A89517400DC5662 /* RepositoryProtocol.swift */; };
+		5332C8392A89535500DC5662 /* AddLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8382A89535500DC5662 /* AddLocationRepository.swift */; };
+		5332C83B2A89E0B700DC5662 /* ConvertRealmToSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C83A2A89E0B700DC5662 /* ConvertRealmToSwift.swift */; };
 		537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */; };
 		537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058B12A8875D2003B79E7 /* MainTabView.swift */; };
 		537058B42A8875D2003B79E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537058B32A8875D2003B79E7 /* Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		5332C82A2A88FEEF00DC5662 /* IdealConditionSwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealConditionSwiftModel.swift; sourceTree = "<group>"; };
 		5332C82C2A88FF0000DC5662 /* IdealConditionRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealConditionRealmModel.swift; sourceTree = "<group>"; };
 		5332C8312A894D2C00DC5662 /* ConvertSwiftToRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertSwiftToRealm.swift; sourceTree = "<group>"; };
+		5332C8362A89517400DC5662 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		5332C8382A89535500DC5662 /* AddLocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationRepository.swift; sourceTree = "<group>"; };
+		5332C83A2A89E0B700DC5662 /* ConvertRealmToSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertRealmToSwift.swift; sourceTree = "<group>"; };
 		537058AC2A8875D2003B79E7 /* PhotoLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocationAppApp.swift; sourceTree = "<group>"; };
 		537058B12A8875D2003B79E7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 			children = (
 				5332C8152A88E68200DC5662 /* TabView+.swift */,
 				5332C8312A894D2C00DC5662 /* ConvertSwiftToRealm.swift */,
+				5332C83A2A89E0B700DC5662 /* ConvertRealmToSwift.swift */,
 			);
 			path = Exstension;
 			sourceTree = "<group>";
@@ -161,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				5332C8232A88FC9700DC5662 /* SaveLocationRepository.swift */,
+				5332C8362A89517400DC5662 /* RepositoryProtocol.swift */,
+				5332C8382A89535500DC5662 /* AddLocationRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -181,6 +190,13 @@
 				5332C82C2A88FF0000DC5662 /* IdealConditionRealmModel.swift */,
 			);
 			path = IdealConditionModel;
+			sourceTree = "<group>";
+		};
+		5332C8332A89501E00DC5662 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 		537058A32A8875D2003B79E7 = {
@@ -206,9 +222,10 @@
 		537058AE2A8875D2003B79E7 /* PhotoLocationApp */ = {
 			isa = PBXGroup;
 			children = (
-				5332C81E2A88FC2400DC5662 /*  AplicationModel */,
 				5332C8172A88ED4F00DC5662 /* Resource */,
 				5332C8142A88E66000DC5662 /* Exstension */,
+				5332C8332A89501E00DC5662 /* Environment */,
+				5332C81E2A88FC2400DC5662 /*  AplicationModel */,
 				5332C7FE2A888FA500DC5662 /* Views */,
 				537058DC2A8875FC003B79E7 /* ViewModels */,
 				537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */,
@@ -395,14 +412,17 @@
 				5332C8102A88905C00DC5662 /* AddLocationViewModel.swift in Sources */,
 				5332C8082A88900C00DC5662 /* LocationListView.swift in Sources */,
 				5332C8242A88FC9700DC5662 /* SaveLocationRepository.swift in Sources */,
+				5332C8372A89517400DC5662 /* RepositoryProtocol.swift in Sources */,
 				5332C80C2A88903400DC5662 /* RecommendLocationView.swift in Sources */,
 				5332C80E2A88904E00DC5662 /* LocationListViewModel.swift in Sources */,
+				5332C83B2A89E0B700DC5662 /* ConvertRealmToSwift.swift in Sources */,
 				5332C82D2A88FF0000DC5662 /* IdealConditionRealmModel.swift in Sources */,
 				5332C80A2A88902100DC5662 /* AddLocationView.swift in Sources */,
 				537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */,
 				5332C8212A88FC6F00DC5662 /* SaveLocationSwiftModel.swift in Sources */,
 				5332C82B2A88FEEF00DC5662 /* IdealConditionSwiftModel.swift in Sources */,
 				537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */,
+				5332C8392A89535500DC5662 /* AddLocationRepository.swift in Sources */,
 				5332C8162A88E68200DC5662 /* TabView+.swift in Sources */,
 				5332C8322A894D2C00DC5662 /* ConvertSwiftToRealm.swift in Sources */,
 			);
