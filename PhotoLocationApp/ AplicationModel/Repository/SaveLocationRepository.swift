@@ -18,6 +18,7 @@ class saveLocationRepository: SaveRepositoryProtocol {
         let config = Realm.Configuration(schemaVersion: 1)
         realm = try! Realm(configuration: config)
         Realm.Configuration.defaultConfiguration = config
+        bind()
     }
 
     func bind() {
@@ -28,11 +29,10 @@ class saveLocationRepository: SaveRepositoryProtocol {
                 print("receiveValue: \(values)")
             }
             .store(in: &cancellables)
-
     }
 
     func fetchData() {
         let results = realm.objects(SaveLocationRealmModel.self)
-        saveLocationSubject.send(saveLocationSubject.value)
+        saveLocationSubject.send(results.map { $0.convertToSwiftModel() })
     }
 }
