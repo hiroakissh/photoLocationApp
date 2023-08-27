@@ -24,6 +24,8 @@
 		5332C8322A894D2C00DC5662 /* ConvertSwiftToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8312A894D2C00DC5662 /* ConvertSwiftToRealm.swift */; };
 		5332C8392A89535500DC5662 /* AddLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8382A89535500DC5662 /* AddLocationRepository.swift */; };
 		5332C83B2A89E0B700DC5662 /* ConvertRealmToSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C83A2A89E0B700DC5662 /* ConvertRealmToSwift.swift */; };
+		5332C83E2A8A2DCA00DC5662 /* IdealEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C83D2A8A2DCA00DC5662 /* IdealEnum.swift */; };
+		5332C8402A8A3FDE00DC5662 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C83F2A8A3FDE00DC5662 /* LocationManager.swift */; };
 		537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */; };
 		537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058B12A8875D2003B79E7 /* MainTabView.swift */; };
 		537058B42A8875D2003B79E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537058B32A8875D2003B79E7 /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		5332C8312A894D2C00DC5662 /* ConvertSwiftToRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertSwiftToRealm.swift; sourceTree = "<group>"; };
 		5332C8382A89535500DC5662 /* AddLocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationRepository.swift; sourceTree = "<group>"; };
 		5332C83A2A89E0B700DC5662 /* ConvertRealmToSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertRealmToSwift.swift; sourceTree = "<group>"; };
+		5332C83D2A8A2DCA00DC5662 /* IdealEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealEnum.swift; sourceTree = "<group>"; };
+		5332C83F2A8A3FDE00DC5662 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		537058AC2A8875D2003B79E7 /* PhotoLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocationAppApp.swift; sourceTree = "<group>"; };
 		537058B12A8875D2003B79E7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		5332C81E2A88FC2400DC5662 /*  AplicationModel */ = {
 			isa = PBXGroup;
 			children = (
+				5332C83C2A8A2DAA00DC5662 /* BaseEnum */,
 				5332C8222A88FC8300DC5662 /* Repository */,
 				5332C81F2A88FC4500DC5662 /* Models */,
 			);
@@ -158,6 +163,7 @@
 			children = (
 				5332C8282A88FEBF00DC5662 /* IdealConditionModel */,
 				5332C8252A88FCDB00DC5662 /* SaveLocationModel */,
+				5332C83F2A8A3FDE00DC5662 /* LocationManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +200,14 @@
 			children = (
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		5332C83C2A8A2DAA00DC5662 /* BaseEnum */ = {
+			isa = PBXGroup;
+			children = (
+				5332C83D2A8A2DCA00DC5662 /* IdealEnum.swift */,
+			);
+			path = BaseEnum;
 			sourceTree = "<group>";
 		};
 		537058A32A8875D2003B79E7 = {
@@ -404,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5332C83E2A8A2DCA00DC5662 /* IdealEnum.swift in Sources */,
 				5332C8122A88906C00DC5662 /* RecommendLocationViewModel.swift in Sources */,
 				5332C8272A88FCF200DC5662 /* SaveLocationRealmModel.swift in Sources */,
 				5332C8102A88905C00DC5662 /* AddLocationViewModel.swift in Sources */,
@@ -417,6 +432,7 @@
 				537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */,
 				5332C8212A88FC6F00DC5662 /* SaveLocationSwiftModel.swift in Sources */,
 				5332C82B2A88FEEF00DC5662 /* IdealConditionSwiftModel.swift in Sources */,
+				5332C8402A8A3FDE00DC5662 /* LocationManager.swift in Sources */,
 				537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */,
 				5332C8392A89535500DC5662 /* AddLocationRepository.swift in Sources */,
 				5332C8162A88E68200DC5662 /* TabView+.swift in Sources */,
@@ -593,6 +609,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報取得のために使用する";
+				INFOPLIST_KEY_NSLocationUsageDescription = "位置情報取得のために使用する";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報を取得するために使用";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -633,6 +652,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報取得のために使用する";
+				INFOPLIST_KEY_NSLocationUsageDescription = "位置情報取得のために使用する";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報を取得するために使用";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

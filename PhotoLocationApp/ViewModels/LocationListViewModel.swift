@@ -22,7 +22,7 @@ class LocationListViewModel: ObservableObject {
         bind()
     }
 
-    func bind() {
+    private func bind() {
 
         repository.fetchData()
             .sink { completion in

@@ -19,7 +19,7 @@ struct MainTabView: View {
                     Text(LocalizedStringKey(String("LocationListTab")))
                 }
                 .tag(SelectionType.locationList)
-            AddLocationView()
+            AddLocationView(viewModel: AddLocationViewModel())
                 .tabItem {
                     Image(systemName: "plus.app")
                     Text(LocalizedStringKey(String("AddLocationTab")))
