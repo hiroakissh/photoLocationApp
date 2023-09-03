@@ -17,7 +17,7 @@ class LocationListViewModel: ObservableObject {
 
     private let repository: SaveLocationRepositoryProtocol
 
-    init(saveLocationRepository: SaveLocationRepositoryProtocol = saveLocationRepository()) {
+    init(saveLocationRepository: SaveLocationRepositoryProtocol) {
         self.repository = saveLocationRepository
         bind()
     }
