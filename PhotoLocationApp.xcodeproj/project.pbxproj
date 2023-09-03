@@ -26,6 +26,7 @@
 		5332C83B2A89E0B700DC5662 /* ConvertRealmToSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C83A2A89E0B700DC5662 /* ConvertRealmToSwift.swift */; };
 		5332C83E2A8A2DCA00DC5662 /* IdealEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C83D2A8A2DCA00DC5662 /* IdealEnum.swift */; };
 		5332C8402A8A3FDE00DC5662 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C83F2A8A3FDE00DC5662 /* LocationManager.swift */; };
+		5332C8432AA453C200DC5662 /* SaveLocationRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8422AA453C200DC5662 /* SaveLocationRepositoryMock.swift */; };
 		537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */; };
 		537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537058B12A8875D2003B79E7 /* MainTabView.swift */; };
 		537058B42A8875D2003B79E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537058B32A8875D2003B79E7 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		5332C83A2A89E0B700DC5662 /* ConvertRealmToSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertRealmToSwift.swift; sourceTree = "<group>"; };
 		5332C83D2A8A2DCA00DC5662 /* IdealEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealEnum.swift; sourceTree = "<group>"; };
 		5332C83F2A8A3FDE00DC5662 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		5332C8422AA453C200DC5662 /* SaveLocationRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLocationRepositoryMock.swift; sourceTree = "<group>"; };
 		537058AC2A8875D2003B79E7 /* PhotoLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537058AF2A8875D2003B79E7 /* PhotoLocationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLocationAppApp.swift; sourceTree = "<group>"; };
 		537058B12A8875D2003B79E7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		5332C81E2A88FC2400DC5662 /*  AplicationModel */ = {
 			isa = PBXGroup;
 			children = (
+				5332C8412AA453A000DC5662 /* Mock */,
 				5332C83C2A8A2DAA00DC5662 /* BaseEnum */,
 				5332C8222A88FC8300DC5662 /* Repository */,
 				5332C81F2A88FC4500DC5662 /* Models */,
@@ -208,6 +211,14 @@
 				5332C83D2A8A2DCA00DC5662 /* IdealEnum.swift */,
 			);
 			path = BaseEnum;
+			sourceTree = "<group>";
+		};
+		5332C8412AA453A000DC5662 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				5332C8422AA453C200DC5662 /* SaveLocationRepositoryMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		537058A32A8875D2003B79E7 = {
@@ -432,6 +443,7 @@
 				537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */,
 				5332C8212A88FC6F00DC5662 /* SaveLocationSwiftModel.swift in Sources */,
 				5332C82B2A88FEEF00DC5662 /* IdealConditionSwiftModel.swift in Sources */,
+				5332C8432AA453C200DC5662 /* SaveLocationRepositoryMock.swift in Sources */,
 				5332C8402A8A3FDE00DC5662 /* LocationManager.swift in Sources */,
 				537058B02A8875D2003B79E7 /* PhotoLocationAppApp.swift in Sources */,
 				5332C8392A89535500DC5662 /* AddLocationRepository.swift in Sources */,
