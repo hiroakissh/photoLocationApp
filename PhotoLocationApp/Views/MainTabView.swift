@@ -13,7 +13,7 @@ struct MainTabView: View {
 
     var body: some View {
         TabView(selection: $selectionType, content: {
-            LocationListView(viewModel: LocationListViewModel())
+            LocationListView(viewModel: LocationListViewModel(saveLocationRepository: saveLocationRepository()))
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text(LocalizedStringKey(String("LocationListTab")))
