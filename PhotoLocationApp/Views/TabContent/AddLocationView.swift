@@ -13,6 +13,7 @@ struct AddLocationView: View {
     @StateObject private var locationManager = LocationManager()
 
     @State private var isIdealCondition = false
+    @State private var isAddButtonPressed = false
 
     @State private var selectedMonth: IdealMonth = .january
     @State private var selectedTime: Int = 0
@@ -27,45 +28,21 @@ struct AddLocationView: View {
             }
             .padding()
 
-            Toggle("理想の条件を追加する", isOn: $isIdealCondition)
+            Toggle("理想の条件を追加する", isOn: $isIdealCondition.animation(.easeInOut(duration: 0.5)))
                 .padding()
 
             if isIdealCondition {
-                HStack {
-                    Text("理想な月")
-                        .padding()
-                    Picker("理想な月", selection: $selectedMonth) {
-                        Text("None").tag(nil as IdealMonth?)
-                        ForEach(IdealMonth.allCases) { month in
-                            Text(month.rawValue.description).tag(month)
-                        }
-                    }
-                }
-                .padding()
+                IdealConditionView(
+                    selectedMonth: $selectedMonth,
+                    selectedTime: $selectedTime,
+                    selectedWeather: $selectedWeather
+                )
+                .transition(.opacity)
+            }
 
-                HStack {
-                    Text("理想な時間帯")
-                        .padding()
-                    Picker("理想な時間帯", selection: $selectedTime) {
-                        Text("None").tag(nil as Int?)
-                        ForEach(0..<25, id: \.self) { time in
-                            Text(String(time))
-                        }
-                    }
-                }
-                .padding()
-
-                HStack {
-                    Text("理想な天気")
-                        .padding()
-                    Picker("理想の天気", selection: $selectedWeather) {
-                        Text("None").tag(nil as IdealWeather?)
-                        ForEach(IdealWeather.allCases) { weather in
-                            Text(weather.rawValue).tag(weather)
-                        }
-                    }
-                }
-                .padding()
+            if isAddButtonPressed {
+                AddButtonPresseView(isDetailViewVisible: $isAddButtonPressed)
+                    .transition(.scale)
             }
 
             Button("位置情報の保存") {
@@ -81,7 +58,15 @@ struct AddLocationView: View {
                     viewModel.idealWeather = selectedWeather
                 }
                 viewModel.addData()
+                withAnimation {
+                    isAddButtonPressed.toggle()
+                }
             }
+            .padding()
+            .background(.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .shadow(radius: 10)
         }
     }
 }
