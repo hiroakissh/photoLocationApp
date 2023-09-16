@@ -22,7 +22,7 @@ enum MainTab: String, CaseIterable {
             return "info.circle"
         }
     }
-
+    
     var index: Int {
         return MainTab.allCases.firstIndex(of: self) ?? 0
     }
