@@ -14,6 +14,9 @@
 		530B60232AB5F9A200112546 /* TapPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60222AB5F9A200112546 /* TapPosition.swift */; };
 		530B60262AB5FE6D00112546 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60252AB5FE6D00112546 /* TabItem.swift */; };
 		530B60292AB6816F00112546 /* AddLocationTabTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60282AB6816F00112546 /* AddLocationTabTest.swift */; };
+		530B602C2AB69B6D00112546 /* AddLocationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B602B2AB69B6D00112546 /* AddLocationMock.swift */; };
+		530B602F2AB69CD600112546 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 530B602E2AB69CD600112546 /* Realm */; };
+		530B60312AB69CD600112546 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 530B60302AB69CD600112546 /* RealmSwift */; };
 		5332C8082A88900C00DC5662 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8072A88900C00DC5662 /* LocationListView.swift */; };
 		5332C80A2A88902100DC5662 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8092A88902100DC5662 /* AddLocationView.swift */; };
 		5332C80C2A88903400DC5662 /* RecommendLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C80B2A88903400DC5662 /* RecommendLocationView.swift */; };
@@ -68,6 +71,7 @@
 		530B60222AB5F9A200112546 /* TapPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapPosition.swift; sourceTree = "<group>"; };
 		530B60252AB5FE6D00112546 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		530B60282AB6816F00112546 /* AddLocationTabTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationTabTest.swift; sourceTree = "<group>"; };
+		530B602B2AB69B6D00112546 /* AddLocationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationMock.swift; sourceTree = "<group>"; };
 		5332C8072A88900C00DC5662 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		5332C8092A88902100DC5662 /* AddLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
 		5332C80B2A88903400DC5662 /* RecommendLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendLocationView.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530B60312AB69CD600112546 /* RealmSwift in Frameworks */,
+				530B602F2AB69CD600112546 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,17 +162,17 @@
 		530B60272AB6814300112546 /* AddLocationTest */ = {
 			isa = PBXGroup;
 			children = (
-				530B602A2AB6817300112546 /* AddLocationTabTest */,
+				530B602B2AB69B6D00112546 /* AddLocationMock.swift */,
 				530B60282AB6816F00112546 /* AddLocationTabTest.swift */,
 			);
 			path = AddLocationTest;
 			sourceTree = "<group>";
 		};
-		530B602A2AB6817300112546 /* AddLocationTabTest */ = {
+		530B602D2AB69CD600112546 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = AddLocationTabTest;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5332C7FE2A888FA500DC5662 /* Views */ = {
@@ -287,6 +293,7 @@
 				537058C02A8875D2003B79E7 /* PhotoLocationAppTests */,
 				537058CA2A8875D2003B79E7 /* PhotoLocationAppUITests */,
 				537058AD2A8875D2003B79E7 /* Products */,
+				530B602D2AB69CD600112546 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -390,6 +397,10 @@
 				537058BF2A8875D2003B79E7 /* PBXTargetDependency */,
 			);
 			name = PhotoLocationAppTests;
+			packageProductDependencies = (
+				530B602E2AB69CD600112546 /* Realm */,
+				530B60302AB69CD600112546 /* RealmSwift */,
+			);
 			productName = PhotoLocationAppTests;
 			productReference = 537058BD2A8875D2003B79E7 /* PhotoLocationAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -525,6 +536,7 @@
 			files = (
 				530B60292AB6816F00112546 /* AddLocationTabTest.swift in Sources */,
 				537058C22A8875D2003B79E7 /* PhotoLocationAppTests.swift in Sources */,
+				530B602C2AB69B6D00112546 /* AddLocationMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,6 +916,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		530B602E2AB69CD600112546 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5332C82E2A894B5F00DC5662 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		530B60302AB69CD600112546 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5332C82E2A894B5F00DC5662 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		5332C82F2A894B6000DC5662 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5332C82E2A894B5F00DC5662 /* XCRemoteSwiftPackageReference "realm-swift" */;
