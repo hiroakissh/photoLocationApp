@@ -13,6 +13,7 @@
 		530B60212AB5F11200112546 /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60202AB5F11200112546 /* TabShape.swift */; };
 		530B60232AB5F9A200112546 /* TapPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60222AB5F9A200112546 /* TapPosition.swift */; };
 		530B60262AB5FE6D00112546 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60252AB5FE6D00112546 /* TabItem.swift */; };
+		530B60292AB6816F00112546 /* AddLocationTabTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60282AB6816F00112546 /* AddLocationTabTest.swift */; };
 		5332C8082A88900C00DC5662 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8072A88900C00DC5662 /* LocationListView.swift */; };
 		5332C80A2A88902100DC5662 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C8092A88902100DC5662 /* AddLocationView.swift */; };
 		5332C80C2A88903400DC5662 /* RecommendLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5332C80B2A88903400DC5662 /* RecommendLocationView.swift */; };
@@ -66,6 +67,7 @@
 		530B60202AB5F11200112546 /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
 		530B60222AB5F9A200112546 /* TapPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapPosition.swift; sourceTree = "<group>"; };
 		530B60252AB5FE6D00112546 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		530B60282AB6816F00112546 /* AddLocationTabTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationTabTest.swift; sourceTree = "<group>"; };
 		5332C8072A88900C00DC5662 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		5332C8092A88902100DC5662 /* AddLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
 		5332C80B2A88903400DC5662 /* RecommendLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendLocationView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,22 @@
 				530B60252AB5FE6D00112546 /* TabItem.swift */,
 			);
 			path = CustomTab;
+			sourceTree = "<group>";
+		};
+		530B60272AB6814300112546 /* AddLocationTest */ = {
+			isa = PBXGroup;
+			children = (
+				530B602A2AB6817300112546 /* AddLocationTabTest */,
+				530B60282AB6816F00112546 /* AddLocationTabTest.swift */,
+			);
+			path = AddLocationTest;
+			sourceTree = "<group>";
+		};
+		530B602A2AB6817300112546 /* AddLocationTabTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddLocationTabTest;
 			sourceTree = "<group>";
 		};
 		5332C7FE2A888FA500DC5662 /* Views */ = {
@@ -310,6 +328,7 @@
 		537058C02A8875D2003B79E7 /* PhotoLocationAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				530B60272AB6814300112546 /* AddLocationTest */,
 				537058C12A8875D2003B79E7 /* PhotoLocationAppTests.swift */,
 			);
 			path = PhotoLocationAppTests;
@@ -504,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530B60292AB6816F00112546 /* AddLocationTabTest.swift in Sources */,
 				537058C22A8875D2003B79E7 /* PhotoLocationAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,7 +702,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -725,7 +745,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;

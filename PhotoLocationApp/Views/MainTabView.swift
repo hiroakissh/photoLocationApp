@@ -13,9 +13,10 @@ struct MainTabView: View {
     @Namespace private var animation
     @State private var tabShapePosition: CGPoint = .zero
 
-    init() {
-        UITabBar.appearance().isHidden = true
-    }
+    // SwiftUI Bug
+//    init() {
+//        UITabBar.appearance().isHidden = true
+//    }
 
     var body: some View {
         VStack(spacing: 0) {
