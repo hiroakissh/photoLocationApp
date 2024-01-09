@@ -37,7 +37,6 @@ class saveLocationRepository: SaveLocationRepositoryProtocol {
     func removeData(removeLocation: SaveLocationSwiftModel) {
         do {
             try realm.write {
-                print(removeLocation.convertToRealmModel())
                 let predicate = NSPredicate(format: "uuid == %@", removeLocation.uuid)
                 if let deleteObject = realm.objects(SaveLocationRealmModel.self)
                     .filter(predicate).first {
