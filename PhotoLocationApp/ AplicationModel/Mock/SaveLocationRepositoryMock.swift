@@ -40,4 +40,8 @@ class SaveLocationRepositoryMock: SaveLocationRepositoryProtocol {
                            testLocation3]))
         }
     }
+
+    func removeData(removeLocation: SaveLocationSwiftModel) {
+        print(remove)
+    }
 }
