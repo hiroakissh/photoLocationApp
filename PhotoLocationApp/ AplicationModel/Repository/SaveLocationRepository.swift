@@ -15,6 +15,7 @@ enum RealmError: Error {
 
 protocol SaveLocationRepositoryProtocol {
     func fetchData() -> Future<[SaveLocationSwiftModel], Error>
+    func removeData(removeLocation: SaveLocationSwiftModel)
 }
 
 class saveLocationRepository: SaveLocationRepositoryProtocol {
@@ -30,6 +31,20 @@ class saveLocationRepository: SaveLocationRepositoryProtocol {
         let swiftData = arrayResults.map { $0.convertToSwiftModel() }
         return Future<[SaveLocationSwiftModel], Error> { value in
             value(.success(swiftData))
+        }
+    }
+
+    func removeData(removeLocation: SaveLocationSwiftModel) {
+        do {
+            try realm.write {
+                let predicate = NSPredicate(format: "uuid == %@", removeLocation.uuid)
+                if let deleteObject = realm.objects(SaveLocationRealmModel.self)
+                    .filter(predicate).first {
+                    realm.delete(deleteObject)
+                }
+            }
+        } catch {
+            print("Delete Error")
         }
     }
 }

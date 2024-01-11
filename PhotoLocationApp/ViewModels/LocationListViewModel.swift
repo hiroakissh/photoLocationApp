@@ -38,4 +38,10 @@ class LocationListViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+
+    func removeSaveLocation(indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        let removedLocation = saveLocations[index]
+        repository.removeData(removeLocation: removedLocation)
+    }
 }

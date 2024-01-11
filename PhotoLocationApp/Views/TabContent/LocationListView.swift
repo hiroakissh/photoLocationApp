@@ -15,9 +15,17 @@ struct LocationListView: View {
             ForEach(viewModel.saveLocations) { element in
                 Text(element.name)
             }
+            .onDelete(perform: { indexSet in
+                print("Delete")
+                viewModel.removeSaveLocation(indexSet: indexSet)
+            })
+            .onTapGesture(perform: {
+                print("Tap")
+            })
         }
     }
 }
+
 
 struct LocationListView_Previews: PreviewProvider {
     static var previews: some View {
