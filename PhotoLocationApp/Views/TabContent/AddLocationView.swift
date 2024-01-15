@@ -70,6 +70,8 @@ struct AddLocationView: View {
             }
             .alert("保存エラー", isPresented: $isShowAlert) {
                 // 特に戻すだけなので、処理を行わない
+                // TODO: 位置情報取得権限がありません、保存をする際には有効にしてくださいアラートも出したい
+                // 設定画面に飛ばせたらなおよし
             } message: {
                 Text("名前が空です。名前をつけて保存してください")
             }
