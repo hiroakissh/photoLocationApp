@@ -19,6 +19,8 @@ struct AddLocationView: View {
     @State private var selectedTime: Int = 0
     @State private var selectedWeather: IdealWeather = .sunny
 
+    @State private var isShowAlert = false
+
     var body: some View {
         VStack {
             HStack {
@@ -46,7 +48,11 @@ struct AddLocationView: View {
             }
 
             Button("位置情報の保存") {
-                if viewModel.name == "" { return }
+                if viewModel.name == "" { 
+                    isShowAlert = true
+                    return
+                }
+                isShowAlert = false
                 guard let latitude = locationManager.coordinate?.coordinate.latitude,
                       let longitude = locationManager.coordinate?.coordinate.longitude else { return }
                 viewModel.latitude = latitude
@@ -61,6 +67,11 @@ struct AddLocationView: View {
                 withAnimation {
                     isAddButtonPressed.toggle()
                 }
+            }
+            .alert("保存エラー", isPresented: $isShowAlert) {
+                // 特に戻すだけなので、処理を行わない
+            } message: {
+                Text("名前が空です。名前をつけて保存してください")
             }
             .padding()
             .background(.blue)
