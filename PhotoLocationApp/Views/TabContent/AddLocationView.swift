@@ -19,6 +19,8 @@ struct AddLocationView: View {
     @State private var selectedTime: Int = 0
     @State private var selectedWeather: IdealWeather = .sunny
 
+    @State private var isShowAlert = false
+
     var body: some View {
         VStack {
             HStack {
@@ -46,9 +48,21 @@ struct AddLocationView: View {
             }
 
             Button("位置情報の保存") {
-                if viewModel.name == "" { return }
+                if !locationManager.isAuthLocation() {
+                    isShowAlert = true
+                    return
+                }
+                if viewModel.name == "" {
+                    isShowAlert = true
+                    return
+                }
+                isShowAlert = false
                 guard let latitude = locationManager.coordinate?.coordinate.latitude,
-                      let longitude = locationManager.coordinate?.coordinate.longitude else { return }
+                      let longitude = locationManager.coordinate?.coordinate.longitude else { 
+                    isShowAlert = true
+
+                    return
+                }
                 viewModel.latitude = latitude
                 viewModel.longitude = longitude
                 viewModel.saveDate = .now
@@ -60,6 +74,22 @@ struct AddLocationView: View {
                 viewModel.addData()
                 withAnimation {
                     isAddButtonPressed.toggle()
+                }
+            }
+            .alert("保存エラー", isPresented: $isShowAlert) {
+                if !locationManager.isAuthLocation() {
+                    Button("設定画面を開く") {
+                        if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
+                           UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        }
+                    }
+                }
+                Button("戻る") {}
+            } message: {
+                if !locationManager.isAuthLocation() {
+                    Text("設定画面で位置情報を有効にしてください")
+                } else {
+                    Text("名前が空です。名前をつけて保存してください")
                 }
             }
             .padding()

@@ -25,4 +25,15 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             coordinate = lastCoordinate
         }
     }
+
+    func isAuthLocation() -> Bool {
+        switch manager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            return true
+        case .notDetermined,.denied, .restricted:
+            return false
+        @unknown default:
+            fatalError()
+        }
+    }
 }
