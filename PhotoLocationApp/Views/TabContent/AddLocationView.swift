@@ -48,13 +48,21 @@ struct AddLocationView: View {
             }
 
             Button("位置情報の保存") {
-                if viewModel.name == "" { 
+                if !locationManager.isAuthLocation() {
+                    isShowAlert = true
+                    return
+                }
+                if viewModel.name == "" {
                     isShowAlert = true
                     return
                 }
                 isShowAlert = false
                 guard let latitude = locationManager.coordinate?.coordinate.latitude,
-                      let longitude = locationManager.coordinate?.coordinate.longitude else { return }
+                      let longitude = locationManager.coordinate?.coordinate.longitude else { 
+                    isShowAlert = true
+
+                    return
+                }
                 viewModel.latitude = latitude
                 viewModel.longitude = longitude
                 viewModel.saveDate = .now
@@ -72,8 +80,20 @@ struct AddLocationView: View {
                 // 特に戻すだけなので、処理を行わない
                 // TODO: 位置情報取得権限がありません、保存をする際には有効にしてくださいアラートも出したい
                 // 設定画面に飛ばせたらなおよし
+                if !locationManager.isAuthLocation() {
+                    Button("設定画面を開く") {
+                        if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
+                           UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        }
+                    }
+                }
+                Button("戻る") {}
             } message: {
-                Text("名前が空です。名前をつけて保存してください")
+                if !locationManager.isAuthLocation() {
+                    Text("設定画面で位置情報を有効にしてください")
+                } else {
+                    Text("名前が空です。名前をつけて保存してください")
+                }
             }
             .padding()
             .background(.blue)
