@@ -12,6 +12,8 @@ struct AddLocationView: View {
     @ObservedObject var viewModel: AddLocationViewModel
     @StateObject private var locationManager = LocationManager()
 
+    @Binding var selectedTab: MainTab
+
     @State private var isIdealCondition = false
     @State private var isAddButtonPressed = false
 
@@ -75,6 +77,7 @@ struct AddLocationView: View {
                 withAnimation {
                     isAddButtonPressed.toggle()
                 }
+                selectedTab = .locationList
             }
             .alert("保存エラー", isPresented: $isShowAlert) {
                 if !locationManager.isAuthLocation() {
@@ -102,7 +105,11 @@ struct AddLocationView: View {
 }
 
 struct AddLocationView_Previews: PreviewProvider {
+    @State static private var sampleActiveTab: MainTab = .addLocationTab
     static var previews: some View {
-        AddLocationView(viewModel: AddLocationViewModel())
+        AddLocationView(
+            viewModel: AddLocationViewModel(),
+            selectedTab: $sampleActiveTab
+        )
     }
 }

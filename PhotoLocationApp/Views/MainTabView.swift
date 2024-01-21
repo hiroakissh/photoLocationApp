@@ -23,7 +23,10 @@ struct MainTabView: View {
             TabView(selection: $activeTab, content: {
                 LocationListView(viewModel: LocationListViewModel(saveLocationRepository: saveLocationRepository()))
                     .tag(MainTab.locationList)
-                AddLocationView(viewModel: AddLocationViewModel())
+                AddLocationView(
+                    viewModel: AddLocationViewModel(),
+                    selectedTab: $activeTab
+                )
                     .tag(MainTab.addLocationTab)
                 RecommendLocationView()
                     .tag(MainTab.recommendLocationTab)
