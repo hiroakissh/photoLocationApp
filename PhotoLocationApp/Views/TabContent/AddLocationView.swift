@@ -15,7 +15,6 @@ struct AddLocationView: View {
     @Binding var selectedTab: MainTab
 
     @State private var isIdealCondition = false
-    @State private var isAddButtonPressed = false
 
     @State private var selectedMonth: IdealMonth = .january
     @State private var selectedTime: Int = 0
@@ -44,11 +43,6 @@ struct AddLocationView: View {
                 .transition(.opacity)
             }
 
-            if isAddButtonPressed {
-                AddButtonPresseView(isDetailViewVisible: $isAddButtonPressed)
-                    .transition(.scale)
-            }
-
             Button("位置情報の保存") {
                 if !locationManager.isAuthLocation() {
                     isShowAlert = true
@@ -74,9 +68,6 @@ struct AddLocationView: View {
                     viewModel.idealWeather = selectedWeather
                 }
                 viewModel.addData()
-                withAnimation {
-                    isAddButtonPressed.toggle()
-                }
                 selectedTab = .locationList
             }
             .alert("保存エラー", isPresented: $isShowAlert) {

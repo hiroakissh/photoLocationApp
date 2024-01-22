@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		530B601A2AA4BE0900112546 /* IdealConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60192AA4BE0900112546 /* IdealConditionView.swift */; };
-		530B601C2AA4C81C00112546 /* AddButtonPresseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B601B2AA4C81C00112546 /* AddButtonPresseView.swift */; };
 		530B601F2AB5E46100112546 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B601E2AB5E46100112546 /* TabModel.swift */; };
 		530B60212AB5F11200112546 /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60202AB5F11200112546 /* TabShape.swift */; };
 		530B60232AB5F9A200112546 /* TapPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60222AB5F9A200112546 /* TapPosition.swift */; };
@@ -65,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		530B60192AA4BE0900112546 /* IdealConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealConditionView.swift; sourceTree = "<group>"; };
-		530B601B2AA4C81C00112546 /* AddButtonPresseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonPresseView.swift; sourceTree = "<group>"; };
 		530B601E2AB5E46100112546 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		530B60202AB5F11200112546 /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
 		530B60222AB5F9A200112546 /* TapPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapPosition.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				530B60192AA4BE0900112546 /* IdealConditionView.swift */,
-				530B601B2AA4C81C00112546 /* AddButtonPresseView.swift */,
 			);
 			path = AddLocationViews;
 			sourceTree = "<group>";
@@ -514,7 +511,6 @@
 				530B60212AB5F11200112546 /* TabShape.swift in Sources */,
 				5332C82D2A88FF0000DC5662 /* IdealConditionRealmModel.swift in Sources */,
 				530B601F2AB5E46100112546 /* TabModel.swift in Sources */,
-				530B601C2AA4C81C00112546 /* AddButtonPresseView.swift in Sources */,
 				5332C80A2A88902100DC5662 /* AddLocationView.swift in Sources */,
 				530B60232AB5F9A200112546 /* TapPosition.swift in Sources */,
 				537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */,
