@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct DetailLocationView: View {
+    var selectedLocation: SaveLocationSwiftModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(selectedLocation.name)
     }
 }
 
 #Preview {
-    DetailLocationView()
+    DetailLocationView(selectedLocation: SaveLocationModelSample().sampleData)
 }
