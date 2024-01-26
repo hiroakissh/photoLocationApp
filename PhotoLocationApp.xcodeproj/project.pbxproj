@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5304AF7D2B6158280038B0A5 /* DetailLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AF7C2B6158280038B0A5 /* DetailLocationView.swift */; };
+		5304AF7F2B63E94C0038B0A5 /* SaveLocationModelSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304AF7E2B63E94C0038B0A5 /* SaveLocationModelSample.swift */; };
 		530B601A2AA4BE0900112546 /* IdealConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60192AA4BE0900112546 /* IdealConditionView.swift */; };
 		530B601F2AB5E46100112546 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B601E2AB5E46100112546 /* TabModel.swift */; };
 		530B60212AB5F11200112546 /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B60202AB5F11200112546 /* TabShape.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		5304AF7C2B6158280038B0A5 /* DetailLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationView.swift; sourceTree = "<group>"; };
+		5304AF7E2B63E94C0038B0A5 /* SaveLocationModelSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLocationModelSample.swift; sourceTree = "<group>"; };
 		530B60192AA4BE0900112546 /* IdealConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealConditionView.swift; sourceTree = "<group>"; };
 		530B601E2AB5E46100112546 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		530B60202AB5F11200112546 /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				5332C8202A88FC6F00DC5662 /* SaveLocationSwiftModel.swift */,
 				5332C8262A88FCF200DC5662 /* SaveLocationRealmModel.swift */,
+				5304AF7E2B63E94C0038B0A5 /* SaveLocationModelSample.swift */,
 			);
 			path = SaveLocationModel;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				530B60212AB5F11200112546 /* TabShape.swift in Sources */,
 				5332C82D2A88FF0000DC5662 /* IdealConditionRealmModel.swift in Sources */,
 				530B601F2AB5E46100112546 /* TabModel.swift in Sources */,
+				5304AF7F2B63E94C0038B0A5 /* SaveLocationModelSample.swift in Sources */,
 				5332C80A2A88902100DC5662 /* AddLocationView.swift in Sources */,
 				530B60232AB5F9A200112546 /* TapPosition.swift in Sources */,
 				537058B22A8875D2003B79E7 /* MainTabView.swift in Sources */,
