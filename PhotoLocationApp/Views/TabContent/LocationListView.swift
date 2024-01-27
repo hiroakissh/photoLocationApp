@@ -11,17 +11,21 @@ struct LocationListView: View {
     @ObservedObject var viewModel: LocationListViewModel
 
     var body: some View {
-        List {
-            ForEach(viewModel.saveLocations) { element in
-                Text(element.name)
+        NavigationStack {
+            List {
+                ForEach(viewModel.saveLocations) { element in
+                    NavigationLink(
+                        destination: DetailLocationView(
+                            selectedLocation: element
+                        )
+                    ) {
+                        Text(element.name)
+                    }
+                }
+                .onDelete(perform: { indexSet in
+                    viewModel.removeSaveLocation(indexSet: indexSet)
+                })
             }
-            .onDelete(perform: { indexSet in
-                print("Delete")
-                viewModel.removeSaveLocation(indexSet: indexSet)
-            })
-            .onTapGesture(perform: {
-                print("Tap")
-            })
         }
     }
 }
