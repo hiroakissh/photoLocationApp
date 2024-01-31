@@ -34,10 +34,16 @@ struct DetailLocationView: View {
                     longitude: selectedLocation.longitude
                 )) {
                     VStack{
-                        Button {
-                            print("Selected Button")
-                        } label: {
-                            Text("view Photo")
+                        if let idealCondition = selectedLocation.idealCondition {
+                            if let idealMonth = idealCondition.idealMonth {
+                                Text("理想月：\(String(idealMonth))")
+                            }
+                            if let idealTime = idealCondition.idealTime {
+                                Text("理想月：\(String(idealTime))")
+                            }
+                            if let idealWeather = idealCondition.idealWeather {
+                                Text("理想天気：\(idealWeather)")
+                            }
                         }
                     }
                     .foregroundColor(.blue)
