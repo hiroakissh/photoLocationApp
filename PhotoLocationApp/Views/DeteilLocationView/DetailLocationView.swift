@@ -23,7 +23,7 @@ struct DetailLocationView: View {
                         latitude: selectedLocation.latitude,
                         longitude: selectedLocation.longitude
                     ),
-                    span: .init()
+                    span: .init(latitudeDelta: 0.05, longitudeDelta: 0.05)
                 )
             )
         )
