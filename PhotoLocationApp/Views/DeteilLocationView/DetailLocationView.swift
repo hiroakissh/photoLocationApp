@@ -34,6 +34,13 @@ struct DetailLocationView: View {
                     longitude: selectedLocation.longitude
                 )) {
                     VStack{
+                        Button(action: {
+                            print("経路案内")
+                        }, label: {
+                            Text("経路案内")
+                        })
+                        .foregroundStyle(.white)
+                        .background(.blue)
                         if let idealCondition = selectedLocation.idealCondition {
                             if let idealMonth = idealCondition.idealMonth {
                                 Text("理想月：\(String(idealMonth))")
