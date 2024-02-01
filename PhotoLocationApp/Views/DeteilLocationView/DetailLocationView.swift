@@ -43,10 +43,10 @@ struct DetailLocationView: View {
                         .background(.blue)
                         if let idealCondition = selectedLocation.idealCondition {
                             if let idealMonth = idealCondition.idealMonth {
-                                Text("理想月：\(String(idealMonth))")
+                                Text("理想月：\(String(idealMonth)) 月")
                             }
                             if let idealTime = idealCondition.idealTime {
-                                Text("理想月：\(String(idealTime))")
+                                Text("理想時間：\(String(idealTime)) 時")
                             }
                             if let idealWeather = idealCondition.idealWeather {
                                 Text("理想天気：\(idealWeather)")
