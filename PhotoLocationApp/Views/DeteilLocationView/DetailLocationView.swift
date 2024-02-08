@@ -23,7 +23,7 @@ struct DetailLocationView: View {
                         latitude: selectedLocation.latitude,
                         longitude: selectedLocation.longitude
                     ),
-                    span: .init()
+                    span: .init(latitudeDelta: 0.05, longitudeDelta: 0.05)
                 )
             )
         )
@@ -34,10 +34,23 @@ struct DetailLocationView: View {
                     longitude: selectedLocation.longitude
                 )) {
                     VStack{
-                        Button {
-                            print("Selected Button")
-                        } label: {
-                            Text("view Photo")
+                        Button(action: {
+                            print("経路案内")
+                        }, label: {
+                            Text("経路案内")
+                        })
+                        .foregroundStyle(.white)
+                        .background(.blue)
+                        if let idealCondition = selectedLocation.idealCondition {
+                            if let idealMonth = idealCondition.idealMonth {
+                                Text("理想月：\(String(idealMonth)) 月")
+                            }
+                            if let idealTime = idealCondition.idealTime {
+                                Text("理想時間：\(String(idealTime)) 時")
+                            }
+                            if let idealWeather = idealCondition.idealWeather {
+                                Text("理想天気：\(idealWeather)")
+                            }
                         }
                     }
                     .foregroundColor(.blue)
