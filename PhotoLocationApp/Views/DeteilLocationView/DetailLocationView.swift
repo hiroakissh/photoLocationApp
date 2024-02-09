@@ -10,6 +10,7 @@ import MapKit
 
 struct DetailLocationView: View {
     var selectedLocation: SaveLocationSwiftModel
+    @State private var directions: [MKRoute] = []
 
     var body: some View {
         Text(selectedLocation.name)
@@ -36,6 +37,7 @@ struct DetailLocationView: View {
                     VStack{
                         Button(action: {
                             print("経路案内")
+                            requestDestination()
                         }, label: {
                             Text("経路案内")
                         })
@@ -60,6 +62,33 @@ struct DetailLocationView: View {
                     Text(selectedLocation.name)
                 }
 
+        }
+    }
+
+    func requestDestination() {
+        let request = MKDirections.Request()
+        request.source = MKMapItem(
+            placemark: MKPlacemark(
+                coordinate: CLLocationCoordinate2D(
+                    latitude: selectedLocation.latitude,
+                    longitude: selectedLocation.longitude
+                )
+            )
+        )
+        request.destination = MKMapItem(
+            placemark: MKPlacemark(
+                coordinate: CLLocationCoordinate2D(
+                    latitude: selectedLocation.latitude,
+                    longitude: selectedLocation.longitude
+                )
+            )
+        )
+        request.transportType = .walking
+        let directions = MKDirections(request: request)
+        directions.calculate { response, error in
+            if let route = response?.routes.first {
+                self.directions = [route]
+            }
         }
     }
 }
