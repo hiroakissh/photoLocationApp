@@ -10,6 +10,7 @@ import MapKit
 
 struct DetailLocationView: View {
     var selectedLocation: SaveLocationSwiftModel
+    @StateObject private var locationManager = LocationManager()
     @State private var directions: [MKRoute] = []
 
     var body: some View {
@@ -69,20 +70,24 @@ struct DetailLocationView: View {
     }
 
     func requestDestination() {
+        guard let latitude = locationManager.coordinate?.coordinate.latitude,
+              let longitude = locationManager.coordinate?.coordinate.longitude else {
+            return
+        }
         let request = MKDirections.Request()
         request.source = MKMapItem(
             placemark: MKPlacemark(
                 coordinate: CLLocationCoordinate2D(
-                    latitude: selectedLocation.latitude,
-                    longitude: selectedLocation.longitude
+                    latitude: latitude,
+                    longitude: longitude
                 )
             )
         )
         request.destination = MKMapItem(
             placemark: MKPlacemark(
                 coordinate: CLLocationCoordinate2D(
-                    latitude: 36.1912,
-                    longitude: 140.2872
+                    latitude: selectedLocation.latitude,
+                    longitude: selectedLocation.longitude
                 )
             )
         )
