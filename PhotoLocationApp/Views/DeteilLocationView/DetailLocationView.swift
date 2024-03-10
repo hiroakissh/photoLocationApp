@@ -10,6 +10,7 @@ import MapKit
 
 struct DetailLocationView: View {
     var selectedLocation: SaveLocationSwiftModel
+    @State private var directions: [MKRoute] = []
 
     var body: some View {
         Text(selectedLocation.name)
@@ -28,6 +29,10 @@ struct DetailLocationView: View {
             )
         )
         {
+            if !directions.isEmpty {
+                MapPolyline(directions[0])
+                    .stroke(.blue, lineWidth: 5)
+            }
             Annotation(
                 coordinate: .init(
                     latitude: selectedLocation.latitude,
@@ -36,6 +41,7 @@ struct DetailLocationView: View {
                     VStack{
                         Button(action: {
                             print("経路案内")
+                            requestDestination()
                         }, label: {
                             Text("経路案内")
                         })
@@ -59,7 +65,34 @@ struct DetailLocationView: View {
                 } label: {
                     Text(selectedLocation.name)
                 }
+        }
+    }
 
+    func requestDestination() {
+        let request = MKDirections.Request()
+        request.source = MKMapItem(
+            placemark: MKPlacemark(
+                coordinate: CLLocationCoordinate2D(
+                    latitude: selectedLocation.latitude,
+                    longitude: selectedLocation.longitude
+                )
+            )
+        )
+        request.destination = MKMapItem(
+            placemark: MKPlacemark(
+                coordinate: CLLocationCoordinate2D(
+                    latitude: 36.1912,
+                    longitude: 140.2872
+                )
+            )
+        )
+        request.transportType = .automobile
+        let directions = MKDirections(request: request)
+        directions.calculate { response, error in
+            if let route = response?.routes.first {
+                self.directions = [route]
+                print(route.distance)
+            }
         }
     }
 }
