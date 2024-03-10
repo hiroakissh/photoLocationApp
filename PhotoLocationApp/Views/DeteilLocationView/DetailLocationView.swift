@@ -29,6 +29,10 @@ struct DetailLocationView: View {
             )
         )
         {
+            if !directions.isEmpty {
+                MapPolyline(directions[0])
+                    .stroke(.blue, lineWidth: 5)
+            }
             Annotation(
                 coordinate: .init(
                     latitude: selectedLocation.latitude,
@@ -61,7 +65,6 @@ struct DetailLocationView: View {
                 } label: {
                     Text(selectedLocation.name)
                 }
-
         }
     }
 
@@ -78,16 +81,17 @@ struct DetailLocationView: View {
         request.destination = MKMapItem(
             placemark: MKPlacemark(
                 coordinate: CLLocationCoordinate2D(
-                    latitude: selectedLocation.latitude,
-                    longitude: selectedLocation.longitude
+                    latitude: 36.1912,
+                    longitude: 140.2872
                 )
             )
         )
-        request.transportType = .walking
+        request.transportType = .automobile
         let directions = MKDirections(request: request)
         directions.calculate { response, error in
             if let route = response?.routes.first {
                 self.directions = [route]
+                print(route.distance)
             }
         }
     }
